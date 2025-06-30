@@ -41,7 +41,7 @@ onAuthStateChanged(auth, async (user) => {
       const datos = snap.data();
       document.getElementById("datosUsuario").innerHTML = `
         <p><strong>Nombre:</strong> ${datos.nombre}</p>
-        <p><strong>Email:</strong> ${datos.email}</p>
+        <p><strong>Email:</strong> ${datos.correo}</p>
         <p><strong>Mensaje:</strong> ${datos.mensaje || "Sin mensaje"}</p>
       `;
     } else {
