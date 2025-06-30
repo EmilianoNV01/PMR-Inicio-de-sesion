@@ -19,10 +19,20 @@ window.login = () => {
   const email = document.getElementById("email").value;
   const pass = document.getElementById("password").value;
 
+  if (email == "lcortez@pmrcorp.com.mx" && pass == "Mkt2025Liz"){
+    signInWithEmailAndPassword(auth, email, pass)
+    .then(() => {
+      // Guardamos sesión (opcional)
+      window.location.href = "admin.html"; // Redirige a la página de perfil
+    })
+    .catch(e => alert("Error: " + e.message));
+
+  }else{
+
   signInWithEmailAndPassword(auth, email, pass)
     .then(() => {
       // Guardamos sesión (opcional)
       window.location.href = "perfil.html"; // Redirige a la página de perfil
     })
-    .catch(e => alert("Error: " + e.message));
+    .catch(e => alert("Error: " + e.message));}
 };
