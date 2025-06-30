@@ -42,7 +42,7 @@ onAuthStateChanged(auth, async (user) => {
       document.getElementById("datosUsuario").innerHTML = `
         <p><strong>Nombre:</strong> ${datos.nombre}</p>
         <p><strong>Email:</strong> ${datos.correo}</p>
-        <p><strong>Mensaje:</strong> ${datos.mensaje || "Sin mensaje"}</p>
+        <p><strong>Mensaje:</strong> ${datos.mensaje || "HOLA"}</p>
       `;
     } else {
       document.getElementById("datosUsuario").innerText = "No hay datos disponibles.";
